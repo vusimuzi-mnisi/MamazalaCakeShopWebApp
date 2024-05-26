@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Cake Shop</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html">Mamazala's Cake Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.jsp">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.jsp">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <main class="container mt-5">
+        <section class="products row">
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="chocolate-cake.jpg" class="card-img-top" alt="Chocolate Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Cake</h5>
+                        <p class="card-text">R180</p>
+                        <form action="AddToCartServlet" method="post">
+                            <input type="hidden" name="productName" value="Chocolate Cake">
+                            <input type="hidden" name="productPrice" value="180">
+                            <input type="hidden" name="productImage" value="chocolate-cake.jpg"> <!-- Hidden field for product image -->
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other products... -->
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="vanilla-cake.jpg" class="card-img-top" alt="Vanilla Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Vanilla Cake</h5>
+                        <p class="card-text">R120</p>
+                        <form action="AddToCartServlet" method="post">
+                            <input type="hidden" name="productName" value="Vanilla Cake">
+                            <input type="hidden" name="productPrice" value="120">
+                            <input type="hidden" name="productImage" value="vanilla-cake.jpg"> <!-- Hidden field for product image -->
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="strawberry-cake.jpg" class="card-img-top" alt="Strawberry Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Strawberry Cake</h5>
+                        <p class="card-text">R120</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Strawberry Cake">
+            <input type="hidden" name="productPrice" value="120">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="lemon-cake.jpg" class="card-img-top" alt="Lemon Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemon Cake</h5>
+                        <p class="card-text">R100</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Lemon Cake">
+            <input type="hidden" name="productPrice" value="100">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="red-velvet-cake.jpg" class="card-img-top" alt="Red Velvet Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Red Velvet Cake</h5>
+                        <p class="card-text">R140</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Red Velvet Cake">
+            <input type="hidden" name="productPrice" value="140">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="cheesecake.jpg" class="card-img-top" alt="Cheesecake">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheesecake</h5>
+                        <p class="card-text">R100</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="CheeseCake">
+            <input type="hidden" name="productPrice" value="100">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="carrot-cake.jpg" class="card-img-top" alt="Carrot Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Carrot Cake</h5>
+                        <p class="card-text">R80</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Carrot Cake">
+            <input type="hidden" name="productPrice" value="80">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="banana-cake.jpg" class="card-img-top" alt="Banana Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana Cake</h5>
+                        <p class="card-text">R80</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Banana Cake">
+            <input type="hidden" name="productPrice" value="80">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="product col-md-4 mb-4">
+                <div class="card">
+                    <img src="coffee-cake.jpg" class="card-img-top" alt="Coffee Cake">
+                    <div class="card-body">
+                        <h5 class="card-title">Coffee Cake</h5>
+                        <p class="card-text">R100</p>
+                        <form action="AddToCartServlet" method="post">
+            <input type="hidden" name="productName" value="Coffee Cake">
+            <input type="hidden" name="productPrice" value="100">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
